@@ -1,0 +1,166 @@
+---
+### data/questions.json
+---
+```json
+[
+  {
+    "id": "Q001",
+    "question_text": "What is the result of the indefinite integral $\\int (3x^2 + 2x + 5) \\,dx$?",
+    "question_images": [],
+    "topic": "Calculus",
+    "subtopic": "Integration",
+    "tags": ["polynomial", "indefinite-integral", "power-rule"],
+    "difficulty": "Easy",
+    "solution_text": "To solve this, we use the power rule for integration, which states that $\\int x^n \\,dx = \\frac{x^{n+1}}{n+1} + C$. We apply this rule to each term in the polynomial. \n\n1. For $3x^2$, the integral is $3 \\cdot \\frac{x^{2+1}}{2+1} = x^3$. \n2. For $2x$, the integral is $2 \\cdot \\frac{x^{1+1}}{1+1} = x^2$. \n3. For $5$, the integral is $5x$. \n\nCombining these results and adding the constant of integration $C$, we get: \n$$x^3 + x^2 + 5x + C$$",
+    "solution_images": [],
+    "solution_video_url": "https://www.youtube.com/watch?v=d_y_p_ckc1c"
+  },
+  {
+    "id": "Q002",
+    "question_text": "Solve the quadratic equation $x^2 - 5x + 6 = 0$.",
+    "question_images": [],
+    "topic": "Algebra",
+    "subtopic": "Quadratics",
+    "tags": ["factoring", "roots", "polynomial"],
+    "difficulty": "Easy",
+    "solution_text": "We can solve this equation by factoring the quadratic expression. We need two numbers that multiply to 6 and add to -5. These numbers are -2 and -3. \n\nSo, we can rewrite the equation as: \n$$(x - 2)(x - 3) = 0$$ \nFor the product of two factors to be zero, at least one of the factors must be zero. Therefore, we have two possible solutions: \n1. $x - 2 = 0 \\implies x = 2$ \n2. $x - 3 = 0 \\implies x = 3$ \n\nThe solutions are $x=2$ and $x=3$.",
+    "solution_images": [],
+    "solution_video_url": ""
+  },
+  {
+    "id": "Q003",
+    "question_text": "Find the area of the region bounded by the curve $y = x^2$, the x-axis, and the lines $x=0$ and $x=2$.",
+    "question_images": [
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23f0f0f0'/%3E%3Cpath d='M0,150 C50,125 100,50 200,0' stroke='%233498db' stroke-width='3' fill='none' transform='translate(0, 0) scale(0.9, 0.9) translate(10, 15)'/%3E%3Cpath d='M10,15 L10,135 L190,135' stroke='%23333' stroke-width='2' fill='none'/%3E%3Ctext x='100' y='145' font-family='Arial' font-size='12' text-anchor='middle'%3Ex-axis%3C/text%3E%3Ctext x='5' y='75' font-family='Arial' font-size='12' writing-mode='tb'%3Ey-axis%3C/text%3E%3Ctext x='100' y='60' font-family='Arial' font-size='14' fill='%23e74c3c'%3Ey=x^2%3C/text%3E%3C/svg%3E"
+    ],
+    "topic": "Calculus",
+    "subtopic": "Definite Integrals",
+    "tags": ["area-under-curve", "definite-integral"],
+    "difficulty": "Medium",
+    "solution_text": "The area under the curve $y=f(x)$ from $x=a$ to $x=b$ is given by the definite integral $A = \\int_{a}^{b} f(x) \\,dx$. \n\nIn this case, $f(x) = x^2$, $a=0$, and $b=2$. \n$$ A = \\int_{0}^{2} x^2 \\,dx $$ \nFirst, we find the antiderivative of $x^2$, which is $\\frac{x^3}{3}$. Then, we evaluate this from 0 to 2: \n$$ A = \\left[ \\frac{x^3}{3} \\right]_{0}^{2} = \\frac{2^3}{3} - \\frac{0^3}{3} = \\frac{8}{3} - 0 = \\frac{8}{3} $$ \nThe area is $\\frac{8}{3}$ square units.",
+    "solution_images": [],
+    "solution_video_url": "https://www.youtube.com/watch?v=4lpalv8_z3w"
+  },
+  {
+    "id": "Q004",
+    "question_text": "What is the value of $\\sin(30^\\circ) + \\cos(60^\\circ)$?",
+    "question_images": [],
+    "topic": "Trigonometry",
+    "subtopic": "Unit Circle",
+    "tags": ["sine", "cosine", "special-angles"],
+    "difficulty": "Easy",
+    "solution_text": "From the unit circle or special triangles, we know the values of sine and cosine for special angles. \n\n$\\sin(30^\\circ) = \\frac{1}{2}$ \n\n$\\cos(60^\\circ) = \\frac{1}{2}$ \n\nTherefore, the sum is: \n$$ \\sin(30^\\circ) + \\cos(60^\\circ) = \\frac{1}{2} + \\frac{1}{2} = 1 $$",
+    "solution_images": [],
+    "solution_video_url": ""
+  },
+  {
+    "id": "Q005",
+    "question_text": "If $f(x) = 2x - 3$ and $g(x) = x^2$, what is $(g \\circ f)(x)$?",
+    "question_images": [],
+    "topic": "Functions & Graphs",
+    "subtopic": "Composition",
+    "tags": ["function-composition", "algebra"],
+    "difficulty": "Medium",
+    "solution_text": "The composition $(g \\circ f)(x)$ means $g(f(x))$. \n\nFirst, we substitute the expression for $f(x)$ into $g(x)$. \n$$ g(f(x)) = g(2x - 3) $$ \nNow, we apply the function $g$ to this expression. The function $g(x)$ squares its input. \n$$ g(2x - 3) = (2x - 3)^2 $$ \nExpanding this expression gives: \n$$ (2x - 3)^2 = (2x)^2 - 2(2x)(3) + 3^2 = 4x^2 - 12x + 9 $$ \nSo, $(g \\circ f)(x) = 4x^2 - 12x + 9$.",
+    "solution_images": [],
+    "solution_video_url": ""
+  },
+  {
+    "id": "Q006",
+    "question_text": "Find the derivative of $f(x) = e^{2x} \\sin(x)$ with respect to $x$.",
+    "question_images": [],
+    "topic": "Calculus",
+    "subtopic": "Differentiation",
+    "tags": ["product-rule", "chain-rule", "derivative"],
+    "difficulty": "Hard",
+    "solution_text": "We need to use the Product Rule, which is $(uv)' = u'v + uv'$. \nLet $u = e^{2x}$ and $v = \\sin(x)$. \n\nFirst, find the derivatives of $u$ and $v$: \n- To find $u'$, we use the Chain Rule. The derivative of $e^{2x}$ is $e^{2x} \\cdot 2 = 2e^{2x}$. \n- The derivative of $v = \\sin(x)$ is $v' = \\cos(x)$. \n\nNow, apply the Product Rule: \n$$ f'(x) = (2e^{2x})(\\sin(x)) + (e^{2x})(\\cos(x)) $$ \nWe can factor out $e^{2x}$ to simplify: \n$$ f'(x) = e^{2x}(2\\sin(x) + \\cos(x)) $$",
+    "solution_images": [],
+    "solution_video_url": "https://www.youtube.com/watch?v=zGgchC_HhM4"
+  },
+  {
+    "id": "Q007",
+    "question_text": "Solve the system of linear equations: \n1. $2x + y = 7$ \n2. $3x - y = 8$",
+    "question_images": [],
+    "topic": "Algebra",
+    "subtopic": "Linear Systems",
+    "tags": ["elimination", "substitution", "simultaneous-equations"],
+    "difficulty": "Medium",
+    "solution_text": "We can solve this system using the elimination method. Notice that the coefficients of $y$ are $+1$ and $-1$. If we add the two equations together, the $y$ terms will cancel out. \n\n$$(2x + y) + (3x - y) = 7 + 8$$ \n$$5x = 15$$ \n$$x = 3$$ \nNow substitute $x=3$ into the first equation to find $y$: \n$$2(3) + y = 7$$ \n$$6 + y = 7$$ \n$$y = 1$$ \nThe solution is $(x, y) = (3, 1)$.",
+    "solution_images": [],
+    "solution_video_url": ""
+  },
+  {
+    "id": "Q008",
+    "question_text": "Simplify the expression $\\frac{\\tan(\\theta)}{\\sec(\\theta)}$ into a single trigonometric function.",
+    "question_images": [],
+    "topic": "Trigonometry",
+    "subtopic": "Identities",
+    "tags": ["identity", "simplification", "sine", "cosine"],
+    "difficulty": "Medium",
+    "solution_text": "We can rewrite the functions in terms of sine and cosine. \n\nRecall the identities: \n- $\\tan(\\theta) = \\frac{\\sin(\\theta)}{\\cos(\\theta)}$ \n- $\\sec(\\theta) = \\frac{1}{\\cos(\\theta)}$ \n\nSubstitute these into the expression: \n$$ \\frac{\\tan(\\theta)}{\\sec(\\theta)} = \\frac{\\frac{\\sin(\\theta)}{\\cos(\\theta)}}{\\frac{1}{\\cos(\\theta)}} $$ \nTo divide by a fraction, we multiply by its reciprocal: \n$$ \\frac{\\sin(\\theta)}{\\cos(\\theta)} \\cdot \\frac{\\cos(\\theta)}{1} $$ \nThe $\\cos(\\theta)$ terms cancel out, leaving: \n$$ \\sin(\\theta) $$",
+    "solution_images": [],
+    "solution_video_url": ""
+  },
+  {
+    "id": "Q009",
+    "question_text": "Find the vertex of the parabola given by the function $f(x) = 2(x - 3)^2 + 5$.",
+    "question_images": [],
+    "topic": "Functions & Graphs",
+    "subtopic": "Parabolas",
+    "tags": ["vertex-form", "parabola", "quadratics"],
+    "difficulty": "Easy",
+    "solution_text": "The function is given in vertex form, which is $f(x) = a(x - h)^2 + k$. \nIn this form, the vertex of the parabola is at the point $(h, k)$. \n\nComparing the given function $f(x) = 2(x - 3)^2 + 5$ to the standard vertex form, we can identify: \n- $a = 2$ \n- $h = 3$ \n- $k = 5$ \n\nTherefore, the vertex is at $(3, 5)$.",
+    "solution_images": [],
+    "solution_video_url": ""
+  },
+  {
+    "id": "Q010",
+    "question_text": "Evaluate the limit: $\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}$",
+    "question_images": [],
+    "topic": "Calculus",
+    "subtopic": "Limits",
+    "tags": ["limits", "factoring", "indeterminate-form"],
+    "difficulty": "Medium",
+    "solution_text": "If we substitute $x=2$ directly, we get $\\frac{4-4}{2-2} = \\frac{0}{0}$, which is an indeterminate form. This means we need to simplify the expression first. \n\nThe numerator $x^2 - 4$ is a difference of squares, which can be factored as $(x-2)(x+2)$. \n\n$$ \\lim_{x \\to 2} \\frac{(x - 2)(x + 2)}{x - 2} $$ \nWe can cancel the $(x - 2)$ term, as long as $x \\neq 2$. Since we are taking a limit as $x$ approaches 2, this is valid. \n\n$$ \\lim_{x \\to 2} (x + 2) $$ \nNow we can substitute $x=2$: \n$$ 2 + 2 = 4 $$ \nThe limit is 4.",
+    "solution_images": [],
+    "solution_video_url": ""
+  },
+  {
+    "id": "Q011",
+    "question_text": "What does the graph for the equation $y = 2x+1$ look like?",
+    "question_images": [],
+    "topic": "Algebra",
+    "subtopic": "Linear Equations",
+    "tags": ["slope-intercept", "graphing", "linear"],
+    "difficulty": "Easy",
+    "solution_text": "The equation $y=2x+1$ is in slope-intercept form, $y=mx+b$. \n- The y-intercept is $b=1$. This is the point where the line crosses the y-axis, which is $(0, 1)$. \n- The slope is $m=2$. This means for every 1 unit you move to the right on the x-axis, you move 2 units up on the y-axis. \n\nThe graph is a straight line passing through $(0, 1)$ with a positive slope.",
+    "solution_images": [
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23f9f9f9'/%3E%3Cpath d='M10,140 L10,10 L190,10' stroke='%23999' stroke-width='1' fill='none' transform='translate(0, 0) scale(1, -1) translate(0, -150)'/%3E%3Cpath d='M-10,109 L210, -31' stroke='%23e74c3c' stroke-width='2.5' fill='none'/%3E%3Ccircle cx='10' cy='109' r='3' fill='%23333'/%3E%3Ctext x='15' y='114' font-family='Arial' font-size='10'%3E(0,1)%3C/text%3E%3C/svg%3E"
+    ],
+    "solution_video_url": ""
+  },
+  {
+    "id": "Q012",
+    "question_text": "Expand and simplify the expression $(a+b)^3$.",
+    "question_images": [],
+    "topic": "Algebra",
+    "subtopic": "Binomial Expansion",
+    "tags": ["binomial-theorem", "polynomial", "cubed"],
+    "difficulty": "Medium",
+    "solution_text": "We can expand this by multiplying $(a+b)$ by itself three times. \n\nFirst, $(a+b)^2 = a^2 + 2ab + b^2$. \n\nNow, multiply this by $(a+b)$: \n$$ (a^2 + 2ab + b^2)(a+b) $$ \n$$ = a(a^2 + 2ab + b^2) + b(a^2 + 2ab + b^2) $$ \n$$ = (a^3 + 2a^2b + ab^2) + (a^2b + 2ab^2 + b^3) $$ \nCombine like terms: \n$$ a^3 + (2a^2b + a^2b) + (ab^2 + 2ab^2) + b^3 $$ \n$$ = a^3 + 3a^2b + 3ab^2 + b^3 $$",
+    "solution_images": [],
+    "solution_video_url": ""
+  },
+  {
+    "id": "Q013",
+    "question_text": "Find the inverse of the function $f(x) = \\frac{x+1}{x-2}$.",
+    "question_images": [],
+    "topic": "Functions & Graphs",
+    "subtopic": "Inverse Functions",
+    "tags": ["inverse", "rational-function", "algebra"],
+    "difficulty": "Hard",
+    "solution_text": "To find the inverse function, $f^{-1}(x)$, we follow these steps:\n1. Replace $f(x)$ with $y$: \n   $$ y = \\frac{x+1}{x-2} $$ \n2. Swap $x$ and $y$: \n   $$ x = \\frac{y+1}{y-2} $$ \n3. Solve for $y$: \n   $$ x(y-2) = y+1 $$ \n   $$ xy - 2x = y+1 $$ \n   $$ xy - y = 2x+1 $$ \n   $$ y(x-1) = 2x+1 $$ \n   $$ y = \\frac{2x+1}{x-1} $$ \n4. Replace $y$ with $f^{-1}(x)$: \n   $$ f^{-1}(x) = \\frac{2x+1}{x-1} $$",
+    "solution_images": [],
+    "solution_video_url": "https://www.youtube.com/watch?v=J_e_vSADW-A"
+  }
+]
