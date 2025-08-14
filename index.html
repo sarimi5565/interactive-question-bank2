@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Question Bank</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <h1>Interactive Question Bank</h1>
+            <div class="controls-top">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">🌓</button>
+            </div>
+        </div>
+        <nav class="filters-nav container">
+            <div class="filter-group search-group">
+                <label for="search-input" class="sr-only">Search</label>
+                <input type="search" id="search-input" placeholder="Search questions, tags, topics...">
+            </div>
+            <div class="filter-group">
+                <label for="topic-filter" class="sr-only">Topic</label>
+                <select id="topic-filter">
+                    <option value="all">All Topics</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="subtopic-filter" class="sr-only">Subtopic</label>
+                <select id="subtopic-filter">
+                    <option value="all">All Subtopics</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="difficulty-filter" class="sr-only">Difficulty</label>
+                <select id="difficulty-filter">
+                    <option value="all">All Difficulties</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div>
+            <div class="filter-group action-buttons">
+                <button id="favorites-toggle" title="Show Favorites">⭐ Show Favorites</button>
+                <button id="random-question">Random Question</button>
+                <button id="clear-filters">Clear Filters</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div id="question-grid" class="question-grid">
+            </div>
+        <div id="empty-state" class="empty-state" style="display: none;">
+            <h2>No questions found</h2>
+            <p>Try adjusting your search or filter criteria.</p>
+        </div>
+        <div id="pagination-controls" class="pagination-controls">
+            <button id="load-more-btn">Load More</button>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
